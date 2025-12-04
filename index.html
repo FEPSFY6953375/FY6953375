@@ -337,8 +337,14 @@ Credit: NASA Quarterly News Volume 26, Issue 4</i>
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
     const DebrisProliferationCount = displayWordCount("DebrisProliferation_InText");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + DebrisProliferationCount;
+	const LegalCount = displayWordCount("Legal_InText");
+	const DebrisDangersCount = displayWordCount("DebrisDangers_InText");
+	const CleanupCount = displayWordCount("Cleanup_InText");
+	const ConclusionCount = displayWordCount("Conclusion_InText");
+    
+	  
+	  // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + DebrisProliferationCount + LegalCount + DebrisDangersCount + CleanupCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
